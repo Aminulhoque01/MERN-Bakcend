@@ -13,6 +13,12 @@ This is a template project for backend development using Typescript, Node.js, Ex
 - **Logging:** Logging with Winston and file rotation using DailyRotateFile.
 - **API Request Logging:** Logging API requests using Morgan.
 
+Route
+
+- singUp--> http://localhost:5000/api/v1/user/signIn
+- login--> http://localhost:5000/api/v1/user/login
+- profile--> http://localhost:5000/api/v1/user/profile
+
 ## Tech Stack
 
 - Typescript
