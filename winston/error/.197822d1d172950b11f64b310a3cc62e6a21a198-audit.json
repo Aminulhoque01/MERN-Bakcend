@@ -24,6 +24,11 @@
             "date": 1748854807485,
             "name": "/home/root1/MERN/winston/error/02-06-2025-15-error.log",
             "hash": "f11f5d07b6943d63ef2d86dd63bb0719051faff3e6c76aabe1668fcc09b81102"
+        },
+        {
+            "date": 1748858405304,
+            "name": "/home/root1/MERN/winston/error/02-06-2025-16-error.log",
+            "hash": "92ddab9fa757479bc1526834753c6c5cfd68024634d88cb1f07e5ad98b7e15b8"
         }
     ],
     "hashType": "sha256"

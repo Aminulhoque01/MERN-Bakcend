@@ -144,3 +144,69 @@ Mon Jun 02 2025 15:47:48 [job-posting-backend] info: [32m🚀 Database connecte
 Mon Jun 02 2025 15:47:48 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
 Mon Jun 02 2025 15:48:7 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
 Mon Jun 02 2025 15:48:7 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:50:20 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:50:20 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:50:22 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:50:22 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:50:23 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:50:23 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:51:42 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 11.165 ms
+Mon Jun 02 2025 15:52:20 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:52:20 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:52:24 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:52:24 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:52:27 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:52:27 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:52:29 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:52:29 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:52:30 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:52:30 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:52:35 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 11.866 ms
+Mon Jun 02 2025 15:52:38 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 3.021 ms
+Mon Jun 02 2025 15:52:56 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:52:56 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:52:59 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:52:59 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:53:16 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:53:16 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:53:17 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:53:17 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:53:53 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:53:53 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:54:11 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:54:11 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:54:13 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:54:13 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:54:24 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:54:24 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:54:26 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:54:26 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:54:28 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 12.234 ms
+Mon Jun 02 2025 15:54:29 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 4.086 ms
+Mon Jun 02 2025 15:54:30 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 3.958 ms
+Mon Jun 02 2025 15:54:30 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 3.053 ms
+Mon Jun 02 2025 15:54:30 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 2.822 ms
+Mon Jun 02 2025 15:55:18 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 3.213 ms
+Mon Jun 02 2025 15:58:38 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:58:38 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:58:45 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:58:45 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:58:52 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:58:52 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:58:58 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:58:58 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:59:0 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:59:0 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:59:18 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:59:18 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:59:20 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:59:20 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:59:28 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:59:28 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:59:35 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:59:35 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:59:38 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:59:38 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:59:46 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:59:46 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:59:54 [job-posting-backend] info: 10.0.60.22 - GET /api/v1/user/profile 200 - 14.658 ms
