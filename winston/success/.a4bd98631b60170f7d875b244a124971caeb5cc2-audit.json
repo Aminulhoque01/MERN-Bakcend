@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "/home/root1/MERN/winston/success/.a4bd98631b60170f7d875b244a124971caeb5cc2-audit.json",
+    "files": [
+        {
+            "date": 1748841331473,
+            "name": "/home/root1/MERN/winston/success/02-06-2025-11-success.log",
+            "hash": "4bddc0101b463c0e4a97b8d91eadba11c88701708d006e083a3e829a20f0a98b"
+        }
+    ],
+    "hashType": "sha256"
+}

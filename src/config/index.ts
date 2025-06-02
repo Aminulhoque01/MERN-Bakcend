@@ -1,52 +1,52 @@
-import { z } from 'zod';
-import dotenv from 'dotenv';
-import path from 'path'; 
+import dotenv from "dotenv";
+import path from "path";
+import { z } from "zod";
 // Load environment variables from .env file
-dotenv.config({ path: path.join(__dirname, '../../.env') });
+dotenv.config({ path: path.join(__dirname, "../../.env") });
 
 // Define the schema for validating environment variables
 const envVarsSchema = z.object({
   NODE_ENV: z
-    .enum(['development', 'test', 'production'])
-    .default('development'),
+    .enum(["development", "test", "production"])
+    .default("development"),
   PORT: z
     .string({
-      invalid_type_error: 'PORT must be a string',
-      required_error: 'PORT is required',
+      invalid_type_error: "PORT must be a string",
+      required_error: "PORT is required",
     })
-    .default('8080'),
+    .default("8080"),
   SOCKET: z
     .string({
-      invalid_type_error: 'SOCKET must be a string',
-      required_error: 'SOCKET is required',
+      invalid_type_error: "SOCKET must be a string",
+      required_error: "SOCKET is required",
     })
-    .default('8082'),
+    .default("8082"),
   MONGODB_URL: z.string({
-    required_error: 'MongoDB URL is required',
-    invalid_type_error: 'MongoDB URL must be a string',
+    required_error: "MongoDB URL is required",
+    invalid_type_error: "MongoDB URL must be a string",
   }),
   JWT_SECRET: z.string({
-    required_error: 'JWT secret is required',
-    invalid_type_error: 'JWT secret must be a string',
+    required_error: "JWT secret is required",
+    invalid_type_error: "JWT secret must be a string",
   }),
   JWT_EXPIRATION_TIME: z
     .string({
-      invalid_type_error: 'JWT_EXPIRATION_TIME must be a valid string',
-      required_error: 'JWT_EXPIRATION_TIME is required',
+      invalid_type_error: "JWT_EXPIRATION_TIME must be a valid string",
+      required_error: "JWT_EXPIRATION_TIME is required",
     })
-    .default('1d'),
+    .default("1d"),
   JWT_REFRESH_EXPIRATION_TIME: z
     .string({
-      invalid_type_error: 'JWT_REFRESH_EXPIRATION_TIME must be a valid string',
-      required_error: 'JWT_REFRESH_EXPIRATION_TIME is required',
+      invalid_type_error: "JWT_REFRESH_EXPIRATION_TIME must be a valid string",
+      required_error: "JWT_REFRESH_EXPIRATION_TIME is required",
     })
-    .default('180d'),
+    .default("180d"),
   BCRYPT_SALT_ROUNDS: z
     .string({
-      invalid_type_error: 'BCRYPT_SALT_ROUNDS must be a string',
-      required_error: 'BCRYPT_SALT_ROUNDS is required',
+      invalid_type_error: "BCRYPT_SALT_ROUNDS must be a string",
+      required_error: "BCRYPT_SALT_ROUNDS is required",
     })
-    .default('12'),
+    .default("12"),
   SMTP_HOST: z.string().optional(),
   SMTP_PORT: z.string().optional(),
   SMTP_USERNAME: z.string().optional(),
@@ -55,7 +55,7 @@ const envVarsSchema = z.object({
   BACKEND_IP: z.string().optional(),
   STRIPE_SECRET_KEY: z.string().optional(),
   STRIPE_WEBHOOK_SECRET: z.string().optional(),
-  MAILCHIMP_API_KEY:z.string().optional()
+  MAILCHIMP_API_KEY: z.string().optional(),
 });
 
 // Validate the environment variables
@@ -94,29 +94,5 @@ export default {
     },
     from: envVars.data.EMAIL_FROM,
   },
-  mailchimp: {
-    apiKey: envVars.data.MAILCHIMP_API_KEY,
-    server: 'us4',
-  },
-  titan: {
-    email: 'info@werkstekkie.com',
-    password: 'Werkstekkie123!!',
-  },
   backendIp: envVars.data.BACKEND_IP,
-  stripe: {
-    secretKey: envVars.data.STRIPE_SECRET_KEY,
-    webhookSecret: envVars.data.STRIPE_WEBHOOK_SECRET,
-  },
-};
-
-export interface MailchimpConfig {
-  apiKey: string;
-  server: string;
-}
-
-export const config = {
-  mailchimp: {
-    apiKey: envVars.data.MAILCHIMP_API_KEY,
-    server: 'us4'
-  }
 };

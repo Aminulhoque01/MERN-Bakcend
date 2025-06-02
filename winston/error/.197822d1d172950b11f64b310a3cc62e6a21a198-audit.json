@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "/home/root1/MERN/winston/error/.197822d1d172950b11f64b310a3cc62e6a21a198-audit.json",
+    "files": [
+        {
+            "date": 1748841331475,
+            "name": "/home/root1/MERN/winston/error/02-06-2025-11-error.log",
+            "hash": "d70009e3c03e73b6d7c89d0c8e57026b3a55f36ebbc312f6611bc23130ad3e6d"
+        }
+    ],
+    "hashType": "sha256"
+}
