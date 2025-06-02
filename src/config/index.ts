@@ -61,11 +61,7 @@ const envVarsSchema = z.object({
     })
     .default("1d"),
   JWT_REFRESH_SECRET: z.string().optional(),
-  SMTP_HOST: z.string().optional(),
-  SMTP_PORT: z.string().optional(),
-  SMTP_USERNAME: z.string().optional(),
-  SMTP_PASSWORD: z.string().optional(),
-  EMAIL_FROM: z.string().optional(),
+ 
   BACKEND_IP: z.string().optional(),
 });
 

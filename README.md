@@ -19,6 +19,10 @@ Route
 - login--> http://localhost:5000/api/v1/user/login
 - profile--> http://localhost:5000/api/v1/user/profile
 
+# this application run:
+
+npm run dev
+
 ## Tech Stack
 
 - Typescript

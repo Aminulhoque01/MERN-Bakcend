@@ -13,3 +13,9 @@ Mon Jun 02 2025 20:17:53 [job-posting-backend] info: [33m♻️  Application li
 Mon Jun 02 2025 20:18:4 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
 Mon Jun 02 2025 20:18:4 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m
 Mon Jun 02 2025 20:23:25 [job-posting-backend] info: 127.0.0.1 - POST /api/v1/user/signIn 200 - 56.175 ms
+Mon Jun 02 2025 20:34:17 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:34:17 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m
+Mon Jun 02 2025 20:34:23 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:34:23 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m
+Mon Jun 02 2025 20:34:27 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 20:34:27 [job-posting-backend] info: [33m♻️  Application listening on port http://localhost:5000[39m
