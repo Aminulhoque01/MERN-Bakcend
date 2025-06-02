@@ -47,15 +47,26 @@ const envVarsSchema = z.object({
       required_error: "BCRYPT_SALT_ROUNDS is required",
     })
     .default("12"),
+
+  JWT_EXPIRES_IN_REMEMBER: z
+    .string({
+      invalid_type_error: "JWT_EXPIRES_IN_REMEMBER must be a string",
+      required_error: "JWT_EXPIRES_IN_REMEMBER is required",
+    })
+    .default("30d"),
+  JWT_EXPIRES_IN_DEFAULT: z
+    .string({
+      invalid_type_error: "JWT_EXPIRES_IN_DEFAULT must be a string",
+      required_error: "JWT_EXPIRES_IN_DEFAULT is required",
+    })
+    .default("1d"),
+  JWT_REFRESH_SECRET: z.string().optional(),
   SMTP_HOST: z.string().optional(),
   SMTP_PORT: z.string().optional(),
   SMTP_USERNAME: z.string().optional(),
   SMTP_PASSWORD: z.string().optional(),
   EMAIL_FROM: z.string().optional(),
   BACKEND_IP: z.string().optional(),
-  STRIPE_SECRET_KEY: z.string().optional(),
-  STRIPE_WEBHOOK_SECRET: z.string().optional(),
-  MAILCHIMP_API_KEY: z.string().optional(),
 });
 
 // Validate the environment variables

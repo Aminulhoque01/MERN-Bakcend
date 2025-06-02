@@ -26,8 +26,40 @@ const signUser = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const LoginUser = catchAsync(async (req: Request, res: Response) => {
+  const { username, password, rememberMe } = req.body;
+  if (!username || !password) {
+    throw new ApiError(StatusCodes.BAD_REQUEST, "Invalid input");
+  }
 
+  const { user, token } = await UserService.LoginUser(
+    username,
+    password,
+    rememberMe
+  );
+
+  sendResponse(res, {
+    code: StatusCodes.OK,
+    message: "user login sessfully",
+    data: { user, token },
+  });
+});
+
+const profile = catchAsync(async (req: Request, res: Response) => {
+  const user = req.user;
+  if (!user) {
+    throw new ApiError(StatusCodes.UNAUTHORIZED, "User not authenticated");
+  }
+
+  sendResponse(res, {
+    code: StatusCodes.OK,
+    message: "User profile fetched successfully",
+    data: user,
+  });
+});
 
 export const UserController = {
   signUser,
+  LoginUser,
+  profile,
 };
