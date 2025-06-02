@@ -8,8 +8,7 @@ import { UserService } from "./user.service";
 const signUser = catchAsync(async (req: Request, res: Response) => {
   const { username, password, shops } = req.body;
   if (!username || !password || !shops) {
-    throw new ApiError(
-      StatusCodes.BAD_REQUEST, "All fields are required" );
+    throw new ApiError(StatusCodes.BAD_REQUEST, "All fields are required");
   }
   if (shops.length < 3) {
     throw new ApiError(
@@ -22,10 +21,12 @@ const signUser = catchAsync(async (req: Request, res: Response) => {
 
   sendResponse(res, {
     code: StatusCodes.OK,
-    message: "Login Successful",
+    message: "user singup sessfully",
     data: user,
   });
 });
+
+
 
 export const UserController = {
   signUser,

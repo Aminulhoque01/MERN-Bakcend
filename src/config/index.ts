@@ -83,16 +83,6 @@ export default {
   bcrypt: {
     saltRounds: envVars.data.BCRYPT_SALT_ROUNDS,
   },
-  email: {
-    smtp: {
-      host: envVars.data.SMTP_HOST,
-      port: envVars.data.SMTP_PORT,
-      auth: {
-        user: envVars.data.SMTP_USERNAME,
-        pass: envVars.data.SMTP_PASSWORD,
-      },
-    },
-    from: envVars.data.EMAIL_FROM,
-  },
+
   backendIp: envVars.data.BACKEND_IP,
 };

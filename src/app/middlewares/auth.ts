@@ -1,90 +1,31 @@
-import { NextFunction, Request, Response } from 'express';
-import { StatusCodes } from 'http-status-codes';
-import { Secret, TokenExpiredError } from 'jsonwebtoken';
-import config from '../../config';
-import ApiError from '../../errors/ApiError';
-import { jwtHelper } from '../../helpers/jwtHelper';
-import { roleRights } from './roles';
-import { User } from '../modules/user/user.model';
+import { NextFunction, Request, Response } from "express";
+import jwt from "jsonwebtoken";
+import { User } from "../modules/user/user.model";
+ 
 
-const auth =(...roles: string[]) =>
-    async (req: Request, res: Response, next: NextFunction) => {
-      try {
-        // Step 1: Get Authorization Header
-        const tokenWithBearer = req.headers.authorization;
-        console.log(tokenWithBearer)
-        if (!tokenWithBearer) {
-          throw new ApiError(StatusCodes.UNAUTHORIZED, 'You are not authorized');
-        }
+const JWT_SECRET = process.env.JWT_SECRET || "secret";
 
-        if (tokenWithBearer.startsWith('Bearer')) {
-          const token = tokenWithBearer.split(' ')[1];
-          try {
-            // Step 2: Verify Token
-            const verifyUser = jwtHelper.verifyToken(
-              token,
-              config.jwt.accessSecret as Secret
-            );
+export interface AuthRequest extends Request {
+  user: any;
+}
 
-            // Step 3: Attach user to the request object
-            req.user = verifyUser;
-            // Step 4: Check if the user exists and is active
-            const user = await User.findById(verifyUser.id);
-            if (!user) {
-              throw new ApiError(StatusCodes.BAD_REQUEST, 'User not found.');
-            } else if (user.isDeleted) {
-              throw new ApiError(
-                StatusCodes.BAD_REQUEST,
-                'Your account has been deleted.'
-              );
-            } else if (user.isBlocked) {
-              throw new ApiError(
-                StatusCodes.BAD_REQUEST,
-                'Your account is blocked.'
-              );
-            } else if (!user.isEmailVerified) {
-              throw new ApiError(
-                StatusCodes.BAD_REQUEST,
-                'Your account is not verified.'
-              );
-            }
-            // Step 5: Role-based Authorization
-            if (roles.length) {
-              console.log(user)
-              const userRole = roleRights.get(user?.role);
-              console.log(userRole)
-              const hasRole = userRole?.some(role => roles.includes(role));
-              console.log(hasRole)
-              if (!hasRole) {
-                throw new ApiError(
-                  StatusCodes.FORBIDDEN,
-                  "You don't have permission to access this API"
-                );
-              }
-            }
+export async function authenticateToken(
+  req: AuthRequest,
+  res: Response,
+  next: NextFunction
+) {
+  const authHeader = req.headers["authorization"];
+  const token = authHeader && authHeader.split(" ")[1];
 
-            next();
-          } catch (err) {
-            // Handle Token Errors
-            if (err instanceof TokenExpiredError) {
-              throw new ApiError(
-                StatusCodes.UNAUTHORIZED,
-                'Your session has expired. Please log in again.'
-              );
-            } else {
-              throw new ApiError(
-                StatusCodes.UNAUTHORIZED,
-                'Invalid token. Please log in again.'
-              );
-            }
-          }
-        } else {
-          // If the token format is incorrect
-          throw new ApiError(StatusCodes.UNAUTHORIZED, 'Invalid token format');
-        }
-      } catch (error) {
-        next(error); // Pass error to next middleware (usually the error handler)
-      }
-    };
+  if (!token) return res.status(401).json({ message: "Token required" });
 
-export default auth;
+  try {
+    const payload: any = jwt.verify(token, JWT_SECRET);
+    const user = await User.findById(payload.id).select("-password");
+    if (!user) return res.status(401).json({ message: "Invalid token user" });
+    req.user = user;
+    next();
+  } catch (err) {
+    return res.status(401).json({ message: "Invalid token" });
+  }
+}

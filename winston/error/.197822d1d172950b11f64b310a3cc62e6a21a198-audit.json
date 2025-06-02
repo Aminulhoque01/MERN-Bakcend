@@ -9,6 +9,21 @@
             "date": 1748841331475,
             "name": "/home/root1/MERN/winston/error/02-06-2025-11-error.log",
             "hash": "d70009e3c03e73b6d7c89d0c8e57026b3a55f36ebbc312f6611bc23130ad3e6d"
+        },
+        {
+            "date": 1748844444713,
+            "name": "/home/root1/MERN/winston/error/02-06-2025-12-error.log",
+            "hash": "7b4d8e384de076fa747eef3069ecb95556f053b4444fd78a1667445fd60b81f1"
+        },
+        {
+            "date": 1748852652217,
+            "name": "/home/root1/MERN/winston/error/02-06-2025-14-error.log",
+            "hash": "62f115d9a2d5b1d6fd0d243b6a14fa674cc038fb511f7457ce1d2325bdba213a"
+        },
+        {
+            "date": 1748854807485,
+            "name": "/home/root1/MERN/winston/error/02-06-2025-15-error.log",
+            "hash": "f11f5d07b6943d63ef2d86dd63bb0719051faff3e6c76aabe1668fcc09b81102"
         }
     ],
     "hashType": "sha256"

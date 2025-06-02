@@ -1,0 +1,19 @@
+Mon Jun 02 2025 15:0:7 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:0:7 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:0:7 [job-posting-backend] warn: Unable to connect to email server. Make sure you have configured the SMTP options in .env
+Mon Jun 02 2025 15:0:16 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:0:16 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:0:16 [job-posting-backend] warn: Unable to connect to email server. Make sure you have configured the SMTP options in .env
+Mon Jun 02 2025 15:17:15 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:17:15 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:18:10 [job-posting-backend] info: 10.0.60.22 - POST /api/v1/user/signIn 200 - 55.410 ms
+Mon Jun 02 2025 15:18:40 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:18:40 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:18:41 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:18:41 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:18:45 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:18:45 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:18:48 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:18:48 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m
+Mon Jun 02 2025 15:19:9 [job-posting-backend] info: [32m🚀 Database connected successfully[39m
+Mon Jun 02 2025 15:19:9 [job-posting-backend] info: [33m♻️  Application listening on port http://10.0.60.22:5000[39m

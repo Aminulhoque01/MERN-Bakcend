@@ -1,11 +1,4 @@
-export const isValidPassword = (password: string): boolean => {
-  const minLength = 8;
-  const hasNumber = /\d/;
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
-
-  return (
-    password.length >= minLength &&
-    hasNumber.test(password) &&
-    hasSpecialChar.test(password)
-  );
-};
+export function isValidPassword(password: string): boolean {
+  const re = /^(?=.*[0-9])(?=.*[!@#$%^&*])/;
+  return password.length >= 8 && re.test(password);
+}
