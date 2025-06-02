@@ -19,10 +19,10 @@ async function main() {
     logger.info(colors.green("🚀 Database connected successfully"));
     const port =
       typeof config.port === "number" ? config.port : Number(config.port);
-    server = app.listen(port, config.backendIp as string, () => {
+    server = app.listen(port, "localhost", () => {
       logger.info(
         colors.yellow(
-          `♻️  Application listening on port http://${config.backendIp}:${port}`
+          `♻️  Application listening on port http://localhost:${port}`
         )
       );
     });

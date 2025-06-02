@@ -29,6 +29,21 @@
             "date": 1748858405304,
             "name": "/home/root1/MERN/winston/error/02-06-2025-16-error.log",
             "hash": "92ddab9fa757479bc1526834753c6c5cfd68024634d88cb1f07e5ad98b7e15b8"
+        },
+        {
+            "date": 1748864256400,
+            "name": "/home/root1/MERN/winston/error/02-06-2025-17-error.log",
+            "hash": "8c194d05fbbb098a9c3ac67575b119b801f77c82c77ff173ab15ad0aea5ec802"
+        },
+        {
+            "date": 1748870629696,
+            "name": "/home/root1/MERN/winston/error/02-06-2025-19-error.log",
+            "hash": "b6bf7c3acf287534392d5af598d47d5f559b57ea48ef7a07d8500efac6564e0e"
+        },
+        {
+            "date": 1748873854301,
+            "name": "/home/root1/MERN/winston/error/02-06-2025-20-error.log",
+            "hash": "c8322c994b3cc1ed5708c016d02bbca6499d1793832f5ed4ab4b1dd735d99d90"
         }
     ],
     "hashType": "sha256"
