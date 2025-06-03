@@ -6,11 +6,6 @@
     "auditLog": "/home/root1/MERN/winston/error/.197822d1d172950b11f64b310a3cc62e6a21a198-audit.json",
     "files": [
         {
-            "date": 1748841331475,
-            "name": "/home/root1/MERN/winston/error/02-06-2025-11-error.log",
-            "hash": "d70009e3c03e73b6d7c89d0c8e57026b3a55f36ebbc312f6611bc23130ad3e6d"
-        },
-        {
             "date": 1748844444713,
             "name": "/home/root1/MERN/winston/error/02-06-2025-12-error.log",
             "hash": "7b4d8e384de076fa747eef3069ecb95556f053b4444fd78a1667445fd60b81f1"
@@ -44,6 +39,21 @@
             "date": 1748873854301,
             "name": "/home/root1/MERN/winston/error/02-06-2025-20-error.log",
             "hash": "c8322c994b3cc1ed5708c016d02bbca6499d1793832f5ed4ab4b1dd735d99d90"
+        },
+        {
+            "date": 1748925426954,
+            "name": "/home/root1/MERN/winston/error/03-06-2025-10-error.log",
+            "hash": "569e9465fde5c49da1b3d082c5994a7c31fbae7174437f8020a97469373a4819"
+        },
+        {
+            "date": 1748927339664,
+            "name": "/home/root1/MERN/winston/error/03-06-2025-11-error.log",
+            "hash": "d94d9919005a4318e6b4e2433875f7cbf97754b8706caa45f429f00b4289c737"
+        },
+        {
+            "date": 1748930546834,
+            "name": "/home/root1/MERN/winston/error/03-06-2025-12-error.log",
+            "hash": "f9767c6888d9b9dc52aa0c6f5dcade42b471da73c7d34f7e83944b1c2966c24f"
         }
     ],
     "hashType": "sha256"

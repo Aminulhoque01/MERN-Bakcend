@@ -4,11 +4,10 @@ import { Server } from "socket.io";
 import app from "./app";
 import { socketHelper } from "./app/socket/socket";
 import config from "./config";
-import { errorLogger, logger } from "./shared/logger";
 
 //uncaught exception
 process.on("uncaughtException", (error) => {
-  errorLogger.error("UnhandleException Detected", error);
+  console.error("UnhandleException Detected", error);
   process.exit(1);
 });
 
@@ -16,11 +15,11 @@ let server: any;
 async function main() {
   try {
     mongoose.connect(config.mongoose.url as string);
-    logger.info(colors.green("🚀 Database connected successfully"));
+    console.log(colors.green("🚀 Database connected successfully"));
     const port =
       typeof config.port === "number" ? config.port : Number(config.port);
     server = app.listen(port, "localhost", () => {
-      logger.info(
+      console.log(
         colors.yellow(
           `♻️  Application listening on port http://localhost:${port}`
         )
@@ -37,14 +36,14 @@ async function main() {
     // @ts-ignore
     global.io = io;
   } catch (error) {
-    errorLogger.error(colors.red("🤢 Failed to connect Database"));
+    console.error(colors.red("🤢 Failed to connect Database"));
   }
 
   //handle unhandledRejection
   process.on("unhandledRejection", (error) => {
     if (server) {
       server.close(() => {
-        errorLogger.error("UnhandledRejection Detected", error);
+        console.error("UnhandledRejection Detected", error);
         process.exit(1);
       });
     } else {

@@ -8,12 +8,11 @@ const ApiError_1 = __importDefault(require("../../errors/ApiError"));
 const handleValidationError_1 = __importDefault(require("../../errors/handleValidationError"));
 const handleZodError_1 = __importDefault(require("../../errors/handleZodError"));
 const handleDuplicateError_1 = __importDefault(require("../../errors/handleDuplicateError"));
-const logger_1 = require("../../shared/logger");
 const globalErrorHandler = (error, req, res, next) => {
     // Log error
     config_1.default.env === 'development'
         ? console.log('🚨 globalErrorHandler ~~ ', error)
-        : logger_1.errorLogger.error('🚨 globalErrorHandler ~~ ', error);
+        : console.error('🚨 globalErrorHandler ~~ ', error);
     let code = 500;
     let message = 'Something went wrong';
     let errorMessages = [];

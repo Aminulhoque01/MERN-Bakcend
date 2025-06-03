@@ -1,75 +1,35 @@
 import dotenv from "dotenv";
 import path from "path";
 import { z } from "zod";
-// Load environment variables from .env file
-dotenv.config({ path: path.join(__dirname, "../../.env") });
+
+// Load environment variables ONLY if not in production
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({ path: path.join(__dirname, "../../.env") });
+}
 
 // Define the schema for validating environment variables
 const envVarsSchema = z.object({
   NODE_ENV: z
     .enum(["development", "test", "production"])
     .default("development"),
-  PORT: z
-    .string({
-      invalid_type_error: "PORT must be a string",
-      required_error: "PORT is required",
-    })
-    .default("8080"),
-  SOCKET: z
-    .string({
-      invalid_type_error: "SOCKET must be a string",
-      required_error: "SOCKET is required",
-    })
-    .default("8082"),
-  MONGODB_URL: z.string({
-    required_error: "MongoDB URL is required",
-    invalid_type_error: "MongoDB URL must be a string",
-  }),
-  JWT_SECRET: z.string({
-    required_error: "JWT secret is required",
-    invalid_type_error: "JWT secret must be a string",
-  }),
-  JWT_EXPIRATION_TIME: z
-    .string({
-      invalid_type_error: "JWT_EXPIRATION_TIME must be a valid string",
-      required_error: "JWT_EXPIRATION_TIME is required",
-    })
-    .default("1d"),
-  JWT_REFRESH_EXPIRATION_TIME: z
-    .string({
-      invalid_type_error: "JWT_REFRESH_EXPIRATION_TIME must be a valid string",
-      required_error: "JWT_REFRESH_EXPIRATION_TIME is required",
-    })
-    .default("180d"),
-  BCRYPT_SALT_ROUNDS: z
-    .string({
-      invalid_type_error: "BCRYPT_SALT_ROUNDS must be a string",
-      required_error: "BCRYPT_SALT_ROUNDS is required",
-    })
-    .default("12"),
-
-  JWT_EXPIRES_IN_REMEMBER: z
-    .string({
-      invalid_type_error: "JWT_EXPIRES_IN_REMEMBER must be a string",
-      required_error: "JWT_EXPIRES_IN_REMEMBER is required",
-    })
-    .default("30d"),
-  JWT_EXPIRES_IN_DEFAULT: z
-    .string({
-      invalid_type_error: "JWT_EXPIRES_IN_DEFAULT must be a string",
-      required_error: "JWT_EXPIRES_IN_DEFAULT is required",
-    })
-    .default("1d"),
+  PORT: z.string().default("5000"),
+  SOCKET: z.string().default("8082"),
+  MONGODB_URL: z.string().nonempty("MongoDB URL is required"),
+  JWT_SECRET: z.string().nonempty("JWT secret is required"),
+  JWT_EXPIRATION_TIME: z.string().default("1d"),
+  JWT_REFRESH_EXPIRATION_TIME: z.string().default("180d"),
+  BCRYPT_SALT_ROUNDS: z.string().default("12"),
+  JWT_EXPIRES_IN_REMEMBER: z.string().default("30d"),
+  JWT_EXPIRES_IN_DEFAULT: z.string().default("1d"),
   JWT_REFRESH_SECRET: z.string().optional(),
- 
   BACKEND_IP: z.string().optional(),
 });
 
-// Validate the environment variables
+// Validate environment variables
 const envVars = envVarsSchema.safeParse(process.env);
 if (!envVars.success) {
-  console.log(envVars.error);
-  throw new Error(`Config validation error: ${envVars.error.format()}`);
+  console.error(envVars.error.format());
+  throw new Error("Config validation error");
 }
 
 export default {
@@ -78,9 +38,7 @@ export default {
   socket_port: envVars.data.SOCKET,
   mongoose: {
     url: envVars.data.MONGODB_URL,
-    options: {
-      // Optional Mongoose configurations can go here
-    },
+    options: {},
   },
   jwt: {
     accessSecret: envVars.data.JWT_SECRET,
@@ -90,6 +48,5 @@ export default {
   bcrypt: {
     saltRounds: envVars.data.BCRYPT_SALT_ROUNDS,
   },
-
   backendIp: envVars.data.BACKEND_IP,
 };

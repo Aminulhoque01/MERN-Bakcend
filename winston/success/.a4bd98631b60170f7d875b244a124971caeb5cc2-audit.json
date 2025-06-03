@@ -6,11 +6,6 @@
     "auditLog": "/home/root1/MERN/winston/success/.a4bd98631b60170f7d875b244a124971caeb5cc2-audit.json",
     "files": [
         {
-            "date": 1748841331473,
-            "name": "/home/root1/MERN/winston/success/02-06-2025-11-success.log",
-            "hash": "4bddc0101b463c0e4a97b8d91eadba11c88701708d006e083a3e829a20f0a98b"
-        },
-        {
             "date": 1748844468481,
             "name": "/home/root1/MERN/winston/success/02-06-2025-12-success.log",
             "hash": "e6f9a7a9329995bc1ba1cc48170ffb48c96fdc9307392e1e5cd33ae8dc6520df"
@@ -49,6 +44,21 @@
             "date": 1748873450799,
             "name": "/home/root1/MERN/winston/success/02-06-2025-20-success.log",
             "hash": "42510e8d8722629b8ede8b3f5a20ae46bd05c762596dab9db4cdecd54c2ff950"
+        },
+        {
+            "date": 1748925426952,
+            "name": "/home/root1/MERN/winston/success/03-06-2025-10-success.log",
+            "hash": "80c7be2c946ebf38737010fff3e06b9fb4b15f8e0bb7a7ab28e0e48eaa070a83"
+        },
+        {
+            "date": 1748927339662,
+            "name": "/home/root1/MERN/winston/success/03-06-2025-11-success.log",
+            "hash": "719b40872bc2ec46a20d447fbbf7fa01de1e44ba6f87cf31a0ca12f0482f6ecc"
+        },
+        {
+            "date": 1748930546832,
+            "name": "/home/root1/MERN/winston/success/03-06-2025-12-success.log",
+            "hash": "1e784b3712943a3d18f0cda4a1ed6ffef5adda4ef1775cedc8088687892ebcca"
         }
     ],
     "hashType": "sha256"

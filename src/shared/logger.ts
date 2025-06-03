@@ -1,65 +1,23 @@
-import path from 'path';
-import DailyRotateFile from 'winston-daily-rotate-file';
-const { createLogger, format, transports } = require('winston');
-const { combine, timestamp, label, printf } = format;
+import winston from "winston";
 
-const myFormat = printf(
-  ({
-    level,
-    message,
-    label,
-    timestamp,
-  }: {
-    level: string;
-    message: string;
-    label: string;
-    timestamp: Date;
-  }) => {
-    const date = new Date(timestamp);
-    const hour = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
+const transports = [];
 
-    return `${date.toDateString()} ${hour}:${minutes}:${seconds} [${label}] ${level}: ${message}`;
-  }
-);
+if (process.env.NODE_ENV === "production") {
+  transports.push(new winston.transports.Console());
+} else {
+  transports.push(
+    new winston.transports.Console()
+    // Your file transport here for local dev
+  );
+}
 
-const logger = createLogger({
-  level: 'info',
-  format: combine(label({ label: 'job-posting-backend' }), timestamp(), myFormat),
-  transports: [
-    new transports.Console(),
-    new DailyRotateFile({
-      filename: path.join(
-        process.cwd(),
-        'winston',
-        'success',
-        '%DATE%-success.log'
-      ),
-      datePattern: 'DD-MM-YYYY-HH',
-      maxSize: '20m',
-      maxFiles: '1d',
-    }),
-  ],
+const logger = winston.createLogger({
+  level: "info",
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple()
+  ),
+  transports,
 });
 
-const errorLogger = createLogger({
-  level: 'error',
-  format: combine(label({ label: 'job-posting-backend' }), timestamp(), myFormat),
-  transports: [
-    new transports.Console(),
-    new DailyRotateFile({
-      filename: path.join(
-        process.cwd(),
-        'winston',
-        'error',
-        '%DATE%-error.log'
-      ),
-      datePattern: 'DD-MM-YYYY-HH',
-      maxSize: '20m',
-      maxFiles: '1d',
-    }),
-  ],
-});
-
-export { errorLogger, logger };
+export default logger;

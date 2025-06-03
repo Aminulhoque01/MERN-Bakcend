@@ -1,26 +1,25 @@
-import colors from 'colors';
-import { Server, Socket } from 'socket.io';
-import { logger } from '../../shared/logger';
+import colors from "colors";
+import { Server, Socket } from "socket.io";
 
-declare module 'socket.io' {
+declare module "socket.io" {
   interface Socket {
     userId?: string;
   }
 }
 
 const socket = (io: Server) => {
-  io.on('connection', (socket: Socket) => {
-    logger.info(colors.blue('🔌🟢 A user connected'));
-    socket.on('user-connected', (userId: string) => {
+  io.on("connection", (socket: Socket) => {
+    console.log(colors.blue("🔌🟢 A user connected"));
+    socket.on("user-connected", (userId: string) => {
       socket.userId = userId;
       socket.join(userId); // Join the room for the specific user
-      logger.info(
+      console.info(
         colors.green(`User ${userId} joined their notification room`)
       );
     });
 
-    socket.on('disconnect', () => {
-      logger.info(colors.red('🔌🔴 A user disconnected'));
+    socket.on("disconnect", () => {
+      console.log(colors.red("🔌🔴 A user disconnected"));
     });
   });
 };

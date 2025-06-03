@@ -18,10 +18,9 @@ const socket_io_1 = require("socket.io");
 const app_1 = __importDefault(require("./app"));
 const socket_1 = require("./app/socket/socket");
 const config_1 = __importDefault(require("./config"));
-const logger_1 = require("./shared/logger");
 //uncaught exception
 process.on("uncaughtException", (error) => {
-    logger_1.errorLogger.error("UnhandleException Detected", error);
+    console.error("UnhandleException Detected", error);
     process.exit(1);
 });
 let server;
@@ -29,10 +28,10 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             mongoose_1.default.connect(config_1.default.mongoose.url);
-            logger_1.logger.info(colors_1.default.green("🚀 Database connected successfully"));
+            console.log(colors_1.default.green("🚀 Database connected successfully"));
             const port = typeof config_1.default.port === "number" ? config_1.default.port : Number(config_1.default.port);
             server = app_1.default.listen(port, "localhost", () => {
-                logger_1.logger.info(colors_1.default.yellow(`♻️  Application listening on port http://localhost:${port}`));
+                console.log(colors_1.default.yellow(`♻️  Application listening on port http://localhost:${port}`));
             });
             //socket
             const io = new socket_io_1.Server(server, {
@@ -46,13 +45,13 @@ function main() {
             global.io = io;
         }
         catch (error) {
-            logger_1.errorLogger.error(colors_1.default.red("🤢 Failed to connect Database"));
+            console.error(colors_1.default.red("🤢 Failed to connect Database"));
         }
         //handle unhandledRejection
         process.on("unhandledRejection", (error) => {
             if (server) {
                 server.close(() => {
-                    logger_1.errorLogger.error("UnhandledRejection Detected", error);
+                    console.error("UnhandledRejection Detected", error);
                     process.exit(1);
                 });
             }
